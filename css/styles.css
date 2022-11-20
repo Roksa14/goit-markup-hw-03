@@ -1,8 +1,34 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;}
+
 body {
   font-family: "Roboto", sans-serif;
   color: var(--black);
   font-size: 14px;
   background-color: var(--white);
+  box-sizing: border-box;
+}
+
+button{
+  cursor: pointer;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ 
+.container{
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 :root {
@@ -13,14 +39,46 @@ body {
   --background-light: #f5f4fa;
   --blue-brand: #2196f3;
   --logo-black: #000000;
+  --border: #eeeeee
+}
+
+.section{
+  padding: 0 94px;
+  background-size: 100%;
+}
+
+ul{
+  padding: 0;
 }
 
 .list {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.header-section{
+  border: 1px solid var(--border);
+}
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  padding: 32px 0;
+  align-items: center;
 }
 
 .header-list .link:focus .link:hover .link:active {
   color: var(--blue-brand);
+}
+
+.header-list{
+  align-items: center;
+  gap: 50px;
+}
+
+.logo{
+  margin-right: 93px;
 }
 
 .header-logo-studio {
@@ -41,6 +99,21 @@ body {
   color: var(--blue-brand);
 }
 
+.nav-set{
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--black);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--blue-brand);
@@ -50,12 +123,18 @@ body {
   color: var(--blue-brand);
 }
 
-.nav-link {
+.header-contact {
   text-decoration: none;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--black);
+  color: var(--gray);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.nav-contact{
+  margin-left: auto;
 }
 
 .header-contact:hover,
@@ -67,16 +146,15 @@ body {
   color: var(--blue-brand);
 }
 
-.header-contact {
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--gray);
-}
-
 .main-title-section {
   background: var(--background);
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 200px;
 }
 
 .main-title {
@@ -87,19 +165,27 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white);
+  padding-bottom: 30px;
+  display: inline-block;
+  width: 696px;
 }
 
-.portfolio-main-title {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.title-button {
+  background: var(--blue-brand);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0cm;
+  width: 216px;
+  height: 50px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px auto;
 }
 
 .hiden-title {
@@ -115,35 +201,29 @@ body {
   overflow: hidden;
 }
 
-.title-button {
-  background: var(--blue-brand);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 0cm;
-  width: 216px;
-  height: 50px;
-  left: 692px;
-  top: 430px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--white);
-  cursor: pointer;
+.about-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  gap: 30px;
+  
 }
 
 .about-title {
-    font-size: 14px;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .about-description {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--gray);
+  width: 270px;
 }
 
 .section-title {
@@ -151,10 +231,30 @@ body {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+.options > .options-img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.options-img{
+  gap: 30px;
+  width: 100%;
+  margin: 94px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.position-list{
+  gap: 30px;
 }
 
 .position-section {
   background: var(--background-light);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .position-box {
@@ -174,6 +274,8 @@ body {
   line-height: 1.8;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .team-position {
@@ -192,6 +294,25 @@ body {
   border-radius: 4px;
 }
 
+.portfolio-main-container{
+  padding-top: 79px;
+  padding-bottom: 94px;
+  width: 1200px;
+}
+
+.portfolio-main-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .portfolio-button {
   background: var(--background-light);
   border-radius: 4px;
@@ -202,6 +323,13 @@ body {
   line-height: 1.6;
   letter-spacing: 0.03em;
   cursor: pointer;
+  padding: 6px 22px;
+}
+
+.portfolio-button-list{
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
 }
 
 .portfolio-button:hover,
@@ -213,19 +341,30 @@ body {
   color: var(--white);
 }
 
+.product-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 1200px;
+}
+
 .product-box {
-  width: 370px;
-  height: 404px;
-  left: 615px;
-  top: 262px;
   background: var(--white);
-  border: 1px solid #eeeeee;
+  width: calc((100% - 60px) / 3);
+}
+
+.product-dscp-box{
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  border-top: none;
 }
 
 .product-name {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-top: 20px;
+  margin-bottom: 4px;
 }
 
 .product-description {
@@ -233,6 +372,10 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--gray);
+}
+
+.footer-container{
+  padding: 60px 0;
 }
 
 .footer-section {
@@ -259,6 +402,12 @@ body {
   text-decoration: none;
 }
 
+.footer-list{
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 9px;
+}
+
 .address-information {
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -273,9 +422,17 @@ body {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
+  display: block;
+  margin-top: 9px;
+ 
 }
 
 .footer-contact:hover,
 .footer-contact:focus {
   color: var(--blue-brand);
+}
+
+ul{
+  margin: 0;
+  padding-left: 0;
 }
